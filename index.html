@@ -1,24 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingenieria De Sistemas</title>
+  <title>Ingeniería de Sistemas</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+
+
+  <!-- Iconos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-atomo" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6">
+        <ellipse cx="12" cy="12" rx="10" ry="4" />
+        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+      </g>
+      <circle cx="12" cy="12" r="1.8" fill="currentColor" />
+    </symbol>
+    <symbol id="i-engranaje" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor">
+        <circle cx="12" cy="12" r="7.5" stroke-width="4" stroke-dasharray="3.1 3.1" />
+        <circle cx="12" cy="12" r="3.2" stroke-width="1.8" />
+      </g>
+    </symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <rect x="6" y="6" width="12" height="12" rx="2" />
+        <rect x="10" y="10" width="4" height="4" />
+        <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
+      </g>
+    </symbol>
+    <symbol id="i-lupa" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="M15.5 15.5L21 21" />
+      </g>
+    </symbol>
+    <symbol id="i-gente" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+        <circle cx="9" cy="8" r="3.2" />
+        <path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.500 2.400 6.500 6" />
+        <circle cx="17.500" cy="9" r="2.500" />
+        <path d="M17 14.200c2.700.1 4.500 1.900 4.500 5.300" />
+      </g>
+    </symbol>
+    <symbol id="i-libro" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
+        <path d="M12 6c-2-1.500-5-2-9-2v14c4 0 7 .5 9 2 2-1.500 5-2 9-2V4c-4 0-7 .5-9 2z" />
+        <path d="M12 6v14" />
+      </g>
+    </symbol>
+  </svg>
+
   <header class="header">
     <nav class="nav">
-      <a class="logo" href="#inicio">Ing. de Sistemas <span>Uniamazonia</span></a>
+      <a class="logo" href="#inicio"><span class="logo-ico">&lt;/&gt;</span> Ing. de Sistemas
+        <span>Uniamazonia</span></a>
       <input type="checkbox" id="menu-toggle" class="menu-toggle">
       <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">☰</label>
       <ul class="menu">
         <li><a href="#programa">El programa</a></li>
+        <li><a href="#areas">Formación</a></li>
         <li><a href="#identidad">Misión y visión</a></li>
-        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#historia">Trayectoria</a></li>
         <li><a href="#documentos">Documentos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -30,8 +80,8 @@
       <div class="hero-texto">
         <p class="tag">Facultad de Ingeniería · Florencia, Caquetá</p>
         <h1>Ingeniería de Sistemas</h1>
-        <p class="lead">Formamos ingenieros que crean soluciones computacionales para el desarrollo de la Amazonia y del
-          país.</p>
+        <p class="lead">Tecnología creada desde la Amazonia. Formamos ingenieros que resuelven problemas reales de la
+          región y del país con software e información.</p>
         <div class="botones">
           <a class="btn btn-primario"
             href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html"
@@ -50,9 +100,16 @@
 };</code></pre>
     </section>
 
+    <section class="cifras">
+      <div><strong>10</strong><span>semestres</span></div>
+      <div><strong>178</strong><span>créditos académicos</span></div>
+      <div><strong>2004</strong><span>año de creación</span></div>
+      <div><strong>2022</strong><span>registro calificado vigente</span></div>
+    </section>
+
     <section class="seccion" id="programa">
       <h2>El programa</h2>
-      <p class="intro">Resumen de la información oficial del programa.</p>
+      <p class="intro">Lo esencial para conocerlo en un vistazo.</p>
       <div class="datos">
         <article class="dato">
           <h3>Título</h3>
@@ -88,23 +145,64 @@
         </article>
       </div>
       <h3 class="subtitulo">Propósito de formación</h3>
-      <p class="texto">Desarrollar procesos de formación integral de profesionales de la Ingeniería de Sistemas, con un
-        currículo que aborda las ciencias básicas, la ingeniería, el campo tecnológico, investigativo, socio-humanista y
-        la formación complementaria. El objetivo es que el egresado incida positivamente en su entorno mediante la
-        creación, innovación y aplicación de soluciones computacionales soportadas en las TIC, que contribuyan al
-        progreso económico, social, tecnológico y sustentable de la región amazónica y el país.</p>
-      <p class="texto">El programa fue creado mediante el Acuerdo 16 del 26 de agosto de 2004.</p>
+      <p class="texto">Formar profesionales integrales capaces de interactuar con su entorno e incidir positivamente en
+        él, mediante la creación, innovación y aplicación de soluciones computacionales soportadas en las Tecnologías de
+        la Información y la Comunicación. Todo con un fin claro: contribuir al progreso económico, social, tecnológico y
+        sustentable de la región amazónica y del país.</p>
     </section>
 
-    <section class="seccion alterna" id="identidad">
+    <section class="seccion alterna" id="areas">
+      <h2>Áreas de formación</h2>
+      <p class="intro">El currículo combina seis frentes para formar un profesional completo.</p>
+      <div class="areas">
+        <article class="area"><svg>
+            <use href="#i-atomo" />
+          </svg>
+          <h3>Ciencias básicas</h3>
+          <p>La base matemática y científica para razonar como ingeniero.</p>
+        </article>
+        <article class="area"><svg>
+            <use href="#i-engranaje" />
+          </svg>
+          <h3>Ingeniería</h3>
+          <p>Métodos para diseñar, construir y mantener sistemas.</p>
+        </article>
+        <article class="area"><svg>
+            <use href="#i-chip" />
+          </svg>
+          <h3>Campo tecnológico</h3>
+          <p>Sistemas de información soportados en tecnologías informáticas.</p>
+        </article>
+        <article class="area"><svg>
+            <use href="#i-lupa" />
+          </svg>
+          <h3>Investigativo</h3>
+          <p>Pensamiento crítico para indagar, innovar y proponer.</p>
+        </article>
+        <article class="area"><svg>
+            <use href="#i-gente" />
+          </svg>
+          <h3>Socio-humanista</h3>
+          <p>Ética y responsabilidad social en cada decisión profesional.</p>
+        </article>
+        <article class="area"><svg>
+            <use href="#i-libro" />
+          </svg>
+          <h3>Formación complementaria</h3>
+          <p>Aprendizaje continuo para actualizarse toda la vida.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" id="identidad">
       <h2>Misión y visión</h2>
       <div class="dos-col">
         <article class="bloque">
           <h3>Misión</h3>
-          <p>Asume como encargo social la formación de profesionales íntegros, con capacidad para crear, innovar,
-            formular y solucionar problemáticas organizacionales y productivas, apoyados en el desarrollo de sistemas de
-            información soportados en diferentes tecnologías informáticas, para contribuir al desarrollo social,
-            económico y tecnológico de la región amazónica y del país.</p>
+          <p>Formar profesionales íntegros, con capacidad para crear, innovar, formular y solucionar problemáticas
+            organizacionales y productivas, apoyados en el desarrollo de sistemas de información soportados en
+            diferentes tecnologías informáticas, para contribuir al desarrollo social, económico y tecnológico de la
+            región amazónica y del país.</p>
         </article>
         <article class="bloque">
           <h3>Visión</h3>
@@ -113,14 +211,11 @@
             desarrollo tecnológico de la región amazónica y del país, apoyados en tecnologías de información.</p>
         </article>
       </div>
-    </section>
-
-    <section class="seccion" id="perfil">
-      <h2>Perfil de egreso</h2>
+      <h3 class="subtitulo">Perfil de egreso</h3>
       <p class="texto">El Ingeniero de Sistemas de la Universidad de la Amazonia comprende las dinámicas del entorno y
-        reconoce las implicaciones y responsabilidades legales, profesionales, éticas, sociales, económicas y culturales
-        de su profesión. Además, sabe que su disciplina evoluciona constantemente, por lo que aplica estrategias
-        autónomas de aprendizaje continuo para perfeccionarse como profesional.</p>
+        reconoce las responsabilidades legales, profesionales, éticas, sociales, económicas y culturales de su
+        profesión. Sabe que su disciplina cambia constantemente, por eso aplica estrategias autónomas de aprendizaje
+        continuo.</p>
       <ul class="chips">
         <li>Ética y responsabilidad social</li>
         <li>Aprendizaje autónomo</li>
@@ -130,12 +225,29 @@
       </ul>
     </section>
 
-    <section class="seccion alterna" id="documentos">
+    <section class="seccion alterna" id="historia">
+      <h2>Trayectoria del programa</h2>
+      <div class="linea">
+        <article>
+          <h3>2004</h3>
+          <p>Se crea el programa con el Acuerdo 16 del 26 de agosto.</p>
+        </article>
+        <article>
+          <h3>2020</h3>
+          <p>Se aprueba el nuevo plan de estudios y el plan de transición (Acuerdo 44 del 2 de diciembre).</p>
+        </article>
+        <article>
+          <h3>2022</h3>
+          <p>El Ministerio de Educación otorga el registro calificado (Resolución 001562 del 16 de febrero).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" id="documentos">
       <h2>Documentos y trámites</h2>
       <div class="dos-col">
         <article class="bloque">
           <h3>Plan de estudios</h3>
-          <p>Aprobado con el Acuerdo 44 del 2 de diciembre de 2020, que incluye el plan de transición.</p>
           <ul class="enlaces">
             <li><a
                 href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2020/Acuerdo%2044%20Plan%20de%20Estudios%20de%20Ingenieria%20de%20Sistemas.pdf"
@@ -182,6 +294,14 @@
       </div>
     </section>
 
+    <section class="cta">
+      <h2>Tu futuro en tecnología empieza en Florencia</h2>
+      <p>Conoce los requisitos y da el primer paso.</p>
+      <a class="btn btn-primario"
+        href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html"
+        target="_blank" rel="noopener">Inscríbete</a>
+    </section>
+
     <section class="seccion" id="contacto">
       <h2>Contacto</h2>
       <div class="contacto">
@@ -194,15 +314,14 @@
         </div>
         <a class="btn btn-primario"
           href="https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado/ingenieria/ingenieria-de-sistemas.html"
-          target="_blank" rel="noopener">Ver página oficial del programa</a>
+          target="_blank" rel="noopener">Más información</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Universidad de la Amazonia · Vigilada Ministerio de Educación</p>
-    <p>Proyecto académico del curso de Web. La información proviene del sitio oficial de Uniamazonia y puede cambiar;
-      verifícala allí.</p>
+    <p><strong>Universidad de la Amazonia</strong> · Programa de Ingeniería de Sistemas · Florencia, Caquetá</p>
+    <p>Vigilada Ministerio de Educación</p>
   </footer>
 
 </body>
